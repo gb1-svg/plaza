@@ -81,8 +81,7 @@ const approveTokenIfNeeded = async (wallet, tokenAddress, tokenName) => {
         const increasedGasPrice = (price * BigInt(125)) / BigInt(100);
 
         const tx = await tokenContract.approve(contractSwap, ApproveAmount, {
-            gasPrice: increasedGasPrice,
-            gasLimit: 500000
+            gasPrice: increasedGasPrice
         });
 
         log.info(`Approval transaction for ${tokenName} sent ${tx.hash}`);
@@ -114,8 +113,7 @@ const deposit = async (contract, tokenType) => {
         const price = (await provider.getFeeData()).gasPrice
         const increasedGasPrice = (price * BigInt(125)) / BigInt(100);
         const tx = await contract.create(tokenType, depositAmount, minAmount, {
-            gasPrice: increasedGasPrice,
-            gasLimit: 350000
+            gasPrice: increasedGasPrice
         });
 
         const timeout = 60 * 1000;
@@ -137,8 +135,7 @@ const redeem = async (contract, tokenType) => {
         const price = (await provider.getFeeData()).gasPrice
         const increasedGasPrice = (price * BigInt(125)) / BigInt(100);
         const tx = await contract.redeem(tokenType, depositAmount, minAmount, {
-            gasPrice: increasedGasPrice,
-            gasLimit: 350000
+            gasPrice: increasedGasPrice
         });
 
         const timeout = 60 * 1000;
