@@ -66,7 +66,7 @@ const fetchUser = async (address, proxyUrl) => {
 const claimRequest = async (address, proxyUrl) => {
     const axiosInstance = createAxiosInstance(proxyUrl);
     try {
-        const response = await axiosInstance.post(`/referrals/claim`, { address, code: 'JL4590xVLSix' });
+        const response = await axiosInstance.post(`/referrals/claim`, { address, code: '1SieMNgAkPYP' });
         return response.data;
     } catch (error) {
         return null;
