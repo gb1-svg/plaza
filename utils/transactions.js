@@ -4,7 +4,7 @@ import log from "./logger.js";
 // Configuration
 const provider = new ethers.JsonRpcProvider('https://base-sepolia-rpc.publicnode.com');
 const contractAddress = '0xF39635F2adF40608255779ff742Afe13dE31f577';
-const contractSwap = "0x809daBC75201F92AC40973f22db37995676BaA04"
+const contractSwap = "0x05623919EC1626289E3929c408BE82D2aCa6003F"
 const explorer = 'https://sepolia.basescan.org/tx/'
 const ApproveAmount = ethers.parseUnits('10000', 'ether');
 const depositAmount = ethers.parseUnits('0.01', 'ether');
